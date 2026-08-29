@@ -1,0 +1,713 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #fffaf7;
+    color: #3d3430;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 82px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    /* NOT fixed / NOT sticky */
+    position: relative;
+
+    z-index: 100;
+}
+
+/* Remove the large rounded rectangle */
+.header::before {
+    display: none;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* If your logo is an IMAGE */
+.logo img {
+    width: 150px;
+    height: auto;
+    max-height: 62px;
+    object-fit: contain;
+}
+
+/* If you are using text logo */
+.logo h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    letter-spacing: 2px;
+    color: #08758b;
+    margin: 0;
+}
+
+.logo p {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #6f9b9c;
+    margin: 0;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #063f5b;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+}
+
+nav a:hover {
+    color: #108b8f;
+}
+
+/* ================= ENQUIRE BUTTON ================= */
+
+.nav-button {
+    text-decoration: none;
+
+    padding: 11px 22px;
+
+    background: #108b8f;
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: all 0.25s ease;
+}
+
+.nav-button:hover {
+    background: #087b80;
+    color: #ffffff;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 680px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f6e9e2;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 10%;
+}
+
+.eyebrow {
+    color: #a46d5c;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+.hero h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 6vw, 82px);
+    line-height: 1.05;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.hero h2 span,
+.section-heading span,
+.customise-content span,
+.about-box span {
+    color: #a46d5c;
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 520px;
+    color: #725f57;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.primary-button {
+    background: #4b3832;
+    color: white;
+}
+
+.secondary-button {
+    border: 1px solid #8f7167;
+    color: #4b3832;
+}
+
+.hero-image {
+    min-height: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ead7cd;
+}
+
+.hero-placeholder {
+    width: 72%;
+    height: 75%;
+    border: 1px solid rgba(75,56,50,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-placeholder span {
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.hero-placeholder p {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    letter-spacing: 4px;
+}
+
+.hero-placeholder small {
+    margin-top: 8px;
+    color: #755f56;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.section-heading > p:last-child {
+    color: #78675f;
+}
+
+
+/* ================= OCCASIONS ================= */
+
+.occasion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.occasion-card {
+    background: white;
+    border: 1px solid #eadfd9;
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.occasion-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(75,56,50,0.09);
+}
+
+.occasion-icon {
+    font-size: 42px;
+    margin-bottom: 17px;
+}
+
+.occasion-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.occasion-card p {
+    color: #7c6d66;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.occasion-card button {
+    background: none;
+    border: none;
+    color: #a46d5c;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* ================= COLLECTION ================= */
+
+.collection-section {
+    background: #f8efeb;
+}
+
+.age-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.age-button {
+    background: white;
+    border: 1px solid #dfd1ca;
+    padding: 11px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.age-button.active,
+.age-button:hover {
+    background: #4b3832;
+    color: white;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background: white;
+    overflow: hidden;
+}
+
+.product-image {
+    height: 320px;
+    background: #eadbd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
+
+.product-info p {
+    font-size: 13px;
+    color: #7d6d65;
+}
+
+.product-price {
+    font-weight: 700;
+    margin-top: 7px;
+}
+
+.enquire-small {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #4b3832;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+
+/* ================= CUSTOMISE ================= */
+
+.customise-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    padding: 110px 9%;
+    background: #4b3832;
+    color: white;
+}
+
+.customise-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.customise-content .eyebrow {
+    color: #e5b9a7;
+}
+
+.customise-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.customise-content span {
+    color: #e8bbaa;
+}
+
+.customise-content > p {
+    color: #e3d4ce;
+    max-width: 520px;
+}
+
+.customise-steps {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.customise-steps div {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 12px;
+}
+
+.customise-steps strong {
+    color: #e5b9a7;
+    font-size: 12px;
+}
+
+.customise-steps span {
+    color: white;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.customise-form {
+    background: #fffaf7;
+    color: #3d3430;
+    padding: 35px;
+}
+
+.customise-form h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.customise-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 14px 0 6px;
+}
+
+.customise-form input,
+.customise-form select,
+.customise-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ded2cb;
+    background: white;
+    font-family: inherit;
+    border-radius: 3px;
+}
+
+.whatsapp-button {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    margin-top: 20px;
+    background: #5c4035;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.feature {
+    text-align: center;
+    padding: 25px;
+}
+
+.feature > div {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #77665f;
+    font-size: 13px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    padding: 100px 7%;
+    background: #f7ebe5;
+}
+
+.about-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-box h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-box span {
+    color: #a46d5c;
+}
+
+.about-box p {
+    color: #75645d;
+    margin: 13px auto;
+    max-width: 700px;
+}
+
+.signature {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #a46d5c !important;
+    margin-top: 30px !important;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    padding: 100px 7%;
+}
+
+.contact-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 35px;
+    background: white;
+    border: 1px solid #eadfd9;
+    text-decoration: none;
+    color: #3d3430;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card div {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+}
+
+.contact-card p {
+    font-size: 13px;
+    color: #77665f;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #342722;
+    color: white;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    color: #cdbbb3;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.copyright {
+    margin-top: 25px !important;
+    font-size: 11px !important;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding: 70px 7%;
+    }
+
+    .hero-image {
+        min-height: 450px;
+    }
+
+    .occasion-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .customise-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .header {
+        height: 70px;
+    }
+
+    .logo h1 {
+        font-size: 19px;
+    }
+
+    .nav-button {
+        padding: 9px 14px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .occasion-grid,
+    .product-grid,
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .customise-content h2 {
+        font-size: 43px;
+    }
+
+    .customise-steps {
+        grid-template-columns: 1fr;
+    }
+
+}

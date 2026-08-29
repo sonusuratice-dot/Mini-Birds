@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MINI BIRDS | Ethnic Wear for Little Girls</title>
+
+    <meta name="description"
+        content="MINI BIRDS - Premium ethnic clothing for girls aged 0-10 years. Customised looks for birthdays, weddings, festivals, Navratri and special occasions.">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+   <div class="hero-placeholder">
+    <img src="{{ url_for('static', filename='images/logo.JPG') }}"
+         alt="MINI BIRDS Logo"
+         class="hero-logo">
+
+    <p>MINI BIRDS</p>
+    <small>Beautiful traditions for little girls</small>
+</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#customise">Customise</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav-button">
+        Enquire
+    </a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">PREMIUM ETHNIC WEAR • AGES 0–10</p>
+
+        <h2>
+            Dress Her in
+            <span>Little Moments.</span>
+        </h2>
+
+        <p class="hero-text">
+            Beautiful ethnic outfits designed for little girls,
+            crafted with comfort, elegance and special occasions in mind.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#collections" class="primary-button">
+                Explore Collection
+            </a>
+
+            <a href="#customise" class="secondary-button">
+                Customise Her Look
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <div class="hero-placeholder">
+            <span>🐦</span>
+            <p>MINI BIRDS</p>
+            <small>Beautiful traditions for little girls</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OCCASIONS ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">CELEBRATE EVERY MOMENT</p>
+
+        <h2>
+            Dress for Every
+            <span>Little Celebration</span>
+        </h2>
+
+        <p>
+            From her first birthday to festive celebrations,
+            find a look made for her special moment.
+        </p>
+
+    </div>
+
+
+    <div class="occasion-grid">
+
+        <div class="occasion-card">
+            <div class="occasion-icon">🎂</div>
+            <h3>Birthday</h3>
+            <p>Cute and charming birthday looks.</p>
+            <button onclick="selectOccasion('Birthday')">
+                Explore →
+            </button>
+        </div>
+
+
+        <div class="occasion-card">
+            <div class="occasion-icon">💍</div>
+            <h3>Wedding</h3>
+            <p>Elegant ethnic looks for wedding celebrations.</p>
+            <button onclick="selectOccasion('Wedding')">
+                Explore →
+            </button>
+        </div>
+
+
+        <div class="occasion-card">
+            <div class="occasion-icon">✨</div>
+            <h3>Party</h3>
+            <p>Beautiful outfits for special parties.</p>
+            <button onclick="selectOccasion('Party')">
+                Explore →
+            </button>
+        </div>
+
+
+        <div class="occasion-card">
+            <div class="occasion-icon">🪔</div>
+            <h3>Navratri</h3>
+            <p>Traditional festive styles for little dancers.</p>
+            <button onclick="selectOccasion('Navratri')">
+                Explore →
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COLLECTIONS ================= -->
+
+<section id="collections" class="section collection-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">OUR COLLECTION</p>
+
+        <h2>
+            Made for
+            <span>Little Girls</span>
+        </h2>
+
+        <p>
+            Discover ethnic styles designed for comfort,
+            celebrations and unforgettable memories.
+        </p>
+
+    </div>
+
+
+    <div class="age-buttons">
+
+        <button class="age-button active"
+            onclick="filterProducts('all', this)">
+            All
+        </button>
+
+        <button class="age-button"
+            onclick="filterProducts('0-2', this)">
+            0–2 Years
+        </button>
+
+        <button class="age-button"
+            onclick="filterProducts('3-5', this)">
+            3–5 Years
+        </button>
+
+        <button class="age-button"
+            onclick="filterProducts('6-8', this)">
+            6–8 Years
+        </button>
+
+        <button class="age-button"
+            onclick="filterProducts('9-10', this)">
+            9–10 Years
+        </button>
+
+    </div>
+
+
+    <div id="product-container" class="product-grid">
+
+    </div>
+
+</section>
+
+
+<!-- ================= CUSTOMISE ================= -->
+
+<section id="customise" class="customise-section">
+
+    <div class="customise-content">
+
+        <p class="eyebrow">YOUR IDEA • HER LOOK</p>
+
+        <h2>
+            Create Her
+            <span>Dream Look</span>
+        </h2>
+
+        <p>
+            Have something special in mind?
+            Tell MINI BIRDS about the occasion, age,
+            style and colours you have imagined.
+        </p>
+
+
+        <div class="customise-steps">
+
+            <div>
+                <strong>01</strong>
+                <span>Choose Occasion</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Choose Age</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Choose Style</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>Tell Us Your Idea</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="customise-form">
+
+        <h3>Tell Us About Her Look</h3>
+
+        <form onsubmit="sendWhatsApp(event)">
+
+            <label>Child's Age</label>
+
+            <select id="age" required>
+
+                <option value="">Select Age</option>
+                <option>0–2 Years</option>
+                <option>3–5 Years</option>
+                <option>6–8 Years</option>
+                <option>9–10 Years</option>
+
+            </select>
+
+
+            <label>Occasion</label>
+
+            <select id="occasion" required>
+
+                <option value="">Select Occasion</option>
+                <option>Birthday</option>
+                <option>Wedding</option>
+                <option>Party</option>
+                <option>Navratri</option>
+                <option>Festival</option>
+                <option>Other</option>
+
+            </select>
+
+
+            <label>Outfit Style</label>
+
+            <select id="style" required>
+
+                <option value="">Select Style</option>
+                <option>Lehenga</option>
+                <option>Chaniya Choli</option>
+                <option>Anarkali</option>
+                <option>Sharara</option>
+                <option>Kurti Set</option>
+                <option>Indo-Western</option>
+                <option>Custom Design</option>
+
+            </select>
+
+
+            <label>Preferred Colour</label>
+
+            <input
+                type="text"
+                id="colour"
+                placeholder="e.g. Pink, Yellow, Pastel Green"
+                required
+            >
+
+
+            <label>Tell Us More</label>
+
+            <textarea
+                id="message"
+                rows="4"
+                placeholder="Tell us about your design idea..."
+            ></textarea>
+
+
+            <button type="submit" class="whatsapp-button">
+                💬 Send Enquiry on WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY MINI BIRDS ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">WHY MINI BIRDS?</p>
+
+        <h2>
+            Made with
+            <span>Love & Care</span>
+        </h2>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+            <div>🧸</div>
+            <h3>Comfort First</h3>
+            <p>
+                Soft and comfortable material choices
+                designed with little ones in mind.
+            </p>
+        </div>
+
+
+        <div class="feature">
+            <div>✨</div>
+            <h3>Premium Quality</h3>
+            <p>
+                Thoughtful fabrics, beautiful details
+                and careful finishing.
+            </p>
+        </div>
+
+
+        <div class="feature">
+            <div>🎨</div>
+            <h3>Customised Looks</h3>
+            <p>
+                Create a look around her occasion,
+                personality and your ideas.
+            </p>
+        </div>
+
+
+        <div class="feature">
+            <div>❤️</div>
+            <h3>Made for Memories</h3>
+            <p>
+                Outfits designed for the moments
+                you'll remember forever.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about-section">
+
+    <div class="about-box">
+
+        <p class="eyebrow">OUR STORY</p>
+
+        <h2>
+            Little Girls.
+            <span>Beautiful Traditions.</span>
+        </h2>
+
+        <p>
+            MINI BIRDS brings together the beauty of Indian ethnic
+            fashion and the comfort little girls need.
+        </p>
+
+        <p>
+            From birthdays and weddings to Navratri and festive
+            celebrations, we create beautiful looks that let
+            little girls enjoy every moment in comfort and style.
+        </p>
+
+        <p class="signature">
+            Made for her little moments. 🐦
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">LET'S CREATE HER LOOK</p>
+
+        <h2>
+            Talk to
+            <span>MINI BIRDS</span>
+        </h2>
+
+        <p>
+            Have a design in mind?
+            We would love to hear about it.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <!-- CHANGE THESE LINKS WITH YOUR REAL DETAILS -->
+
+        <a href="https://wa.me/YOUR_NUMBER"
+            class="contact-card">
+
+            <div>💬</div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+                Enquire about customised outfits
+            </p>
+
+        </a>
+
+
+        <a href="https://instagram.com/YOUR_USERNAME"
+            target="_blank"
+            class="contact-card">
+
+            <div>📸</div>
+
+            <h3>Instagram</h3>
+
+            <p>
+                Follow our latest looks
+            </p>
+
+        </a>
+
+
+        <a href="mailto:YOUR_EMAIL@gmail.com"
+            class="contact-card">
+
+            <div>✉️</div>
+
+            <h3>Email</h3>
+
+            <p>
+                Send us your detailed enquiry
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🐦 MINI BIRDS
+    </div>
+
+    <p>
+        Little Looks. Big Dreams.
+    </p>
+
+    <p class="copyright">
+        © 2026 MINI BIRDS. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>
